@@ -4,7 +4,7 @@ import logo from "../assets/hh-bw-wide.png";
 const Header = () => {
   return (
     <section id="home">
-      <header id="home" className="bg-black text-white">
+      <header className="bg-black text-white">
         <div className="flex flex-col items-center justify-center py-8">
           {/* Enlarged Logo */}
           <img

@@ -37,7 +37,7 @@ const AboutUs = () => {
             <div className="flex items-center space-x-2 mb-4">
               <FontAwesomeIcon
                 icon={faCodeBranch}
-                className="text-gray-400 hover:text-black transition duration-300"
+                className="text-black hover:text-black transition duration-300"
                 size="2x"
               />
               <h3 className="text-md sm:text-xl font-semibold text-left">
@@ -93,7 +93,7 @@ const AboutUs = () => {
             <div className="flex items-center space-x-2 mb-4">
               <FontAwesomeIcon
                 icon={faGlobe}
-                className="text-gray-400 hover:text-black transition duration-300"
+                className="text-black hover:text-black transition duration-300"
                 size="2x"
               />
               <h3 className="text-md sm:text-xl font-semibold text-left">

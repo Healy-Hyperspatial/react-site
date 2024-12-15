@@ -20,13 +20,13 @@ const Footer = () => {
           >
             About Us
           </a>
-          {/* <a
+          <a
             href="#services"
             className="text-gray-400 hover:text-white transition duration-300"
           >
             Services
           </a>
-          <a
+          {/* <a
             href="#contact"
             className="text-gray-400 hover:text-white transition duration-300"
           >

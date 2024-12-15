@@ -1,10 +1,13 @@
-/** @type {import('tailwindcss').Config} */
+const defaultTheme = require("tailwindcss/defaultTheme");
+
 module.exports = {
-  content: [
-    "./src/**/*.{js,jsx,ts,tsx}", // Scan your React components
-  ],
+  content: ["./src/**/*.{html,js,jsx,ts,tsx}", "./public/index.html"], // Adjust paths for your project
   theme: {
-    extend: {}, // Add customizations here if needed
+    extend: {
+      fontFamily: {
+        sans: ["Playfair Display", ...defaultTheme.fontFamily.sans],
+      },
+    },
   },
-  plugins: [], // Add plugins here (optional)
+  plugins: [],
 };

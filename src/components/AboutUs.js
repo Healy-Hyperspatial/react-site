@@ -28,14 +28,6 @@ const AboutUs = () => {
             driving sustainable growth and competitive advantage for our
             clients.
           </p>
-          <a
-            href="https://github.com/Healy-Hyperspatial"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-block mt-6 px-6 py-3 text-lg font-medium text-white bg-black rounded-lg shadow hover:bg-gray-800 transition duration-300"
-          >
-            Visit Our GitHub
-          </a>
         </div>
 
         {/* Sidebar */}

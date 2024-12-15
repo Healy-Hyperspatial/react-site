@@ -20,7 +20,7 @@ const Navbar = () => {
           >
             About Us
           </a>
-          <a
+          {/* <a
             href="#services"
             className="hover:text-gray-300 transition duration-300"
           >
@@ -31,7 +31,7 @@ const Navbar = () => {
             className="hover:text-gray-300 transition duration-300"
           >
             Contact
-          </a>
+          </a> */}
         </div>
 
         {/* Hamburger Menu for Mobile */}

@@ -4,7 +4,7 @@ import { faCodeBranch, faGlobe } from "@fortawesome/free-solid-svg-icons";
 
 const AboutUs = () => {
   return (
-    <section className="bg-white text-black py-12 px-6">
+    <section id="about" className="bg-white text-black py-12 px-6">
       <div className="container mx-auto flex flex-col md:flex-row gap-8">
         {/* Main Content */}
         <div className="flex-1">

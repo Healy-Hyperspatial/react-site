@@ -1,4 +1,6 @@
 import React from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCodeBranch, faGlobe } from "@fortawesome/free-solid-svg-icons";
 
 const AboutUs = () => {
   return (
@@ -36,41 +38,97 @@ const AboutUs = () => {
 
         {/* Sidebar */}
         <div className="w-full md:w-1/3">
-          <h3 className="text-xl font-semibold mb-4 text-left">
-            Our Open Source Projects
-          </h3>
-          <ul className="space-y-4 text-left">
-            <li>
-              <a
-                href="https://github.com/stac-utils/stac-fastapi-elasticsearch"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-black hover:text-gray-700 transition duration-300"
-              >
-                STAC-FastAPI-Elasticsearch-OpenSearch
-              </a>
-            </li>
-            <li>
-              <a
-                href="https://github.com/stac-utils/stac-validator"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-black hover:text-gray-700 transition duration-300"
-              >
-                STAC Validator
-              </a>
-            </li>
-            <li>
-              <a
-                href="https://github.com/Healy-Hyperspatial/stacchain"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-black hover:text-gray-700 transition duration-300"
-              >
-                STACChain
-              </a>
-            </li>
-          </ul>
+          {/* Open Source Projects */}
+          <div className="mb-6">
+            <div className="flex items-center space-x-2 mb-4">
+              <FontAwesomeIcon
+                icon={faCodeBranch}
+                className="text-gray-400 hover:text-black transition duration-300"
+                size="2x"
+              />
+              <h3 className="text-xl font-semibold text-left">
+                Open Source Projects
+              </h3>
+            </div>
+            <ul className="space-y-4 text-left">
+              <li>
+                <a
+                  href="https://github.com/stac-utils/stac-fastapi-elasticsearch"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-black hover:text-gray-700 transition duration-300"
+                >
+                  stac-fastapi-elasticsearch-opensearch
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://github.com/stac-utils/stac-validator"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-black hover:text-gray-700 transition duration-300"
+                >
+                  stac-validator
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://github.com/stac-utils/stac-check"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-black hover:text-gray-700 transition duration-300"
+                >
+                  stac-check
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://github.com/stacchain"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-black hover:text-gray-700 transition duration-300"
+                >
+                  stacchain
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          {/* Website Design Section */}
+          <div>
+            <div className="flex items-center space-x-2 mb-4">
+              <FontAwesomeIcon
+                icon={faGlobe}
+                className="text-gray-400 hover:text-black transition duration-300"
+                size="2x"
+              />
+              <h3 className="text-xl font-semibold text-left">
+                Website Design
+              </h3>
+            </div>
+            <ul className="space-y-4 text-left">
+              <li>
+                <a
+                  href="https://jonhealy1.github.io"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-black hover:text-gray-700 transition duration-300"
+                >
+                  jonhealy1.github.io
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://stacchain.github.io"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-black hover:text-gray-700 transition duration-300"
+                >
+                  stacchain.github.io
+                </a>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </section>

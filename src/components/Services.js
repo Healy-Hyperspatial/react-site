@@ -13,6 +13,11 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 import { faCloud } from "@fortawesome/free-solid-svg-icons";
 import { faReact } from "@fortawesome/free-brands-svg-icons/faReact";
+import esLogo from "../assets/es-logo.svg";
+import fastapiLogo from "../assets/fastapi-logo.svg";
+import mongoLogo from "../assets/mongo-logo.svg";
+import kubernetesLogo from "../assets/kubernetes-logo.svg";
+import azureLogo from "../assets/azure-logo.svg";
 
 const Services = () => {
   return (
@@ -53,6 +58,31 @@ const Services = () => {
             <FontAwesomeIcon icon={faReact} className="text-black" />
             <FontAwesomeIcon icon={faEthereum} className="text-black" />
             <FontAwesomeIcon icon={faUbuntu} className="text-black" />
+            <img
+              src={esLogo}
+              alt="Elasticsearch"
+              className="w-8 h-8 object-contain"
+            />
+            <img
+              src={fastapiLogo}
+              alt="FastAPI"
+              className="w-8 h-8 object-contain"
+            />
+            <img
+              src={kubernetesLogo}
+              alt="Kubernetes"
+              className="w-8 h-8 object-contain"
+            />
+            <img
+              src={azureLogo}
+              alt="Microsoft Azure"
+              className="w-8 h-8 object-contain"
+            />
+            <img
+              src={mongoLogo}
+              alt="MongoDB"
+              className="w-8 h-8 object-contain"
+            />
           </div>
         </div>
       </div>

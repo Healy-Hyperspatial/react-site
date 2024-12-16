@@ -37,14 +37,14 @@ const AboutUs = () => {
             <div className="flex items-center space-x-2 mb-4">
               <FontAwesomeIcon
                 icon={faCodeBranch}
-                className="text-black hover:text-black transition duration-300"
+                className="text-gray-500 hover:text-black transition duration-300"
                 size="2x"
               />
               <h3 className="text-md sm:text-xl font-semibold text-left">
                 Open Source Projects
               </h3>
             </div>
-            <ul className="space-y-4 text-left">
+            <ul className="space-y-4 text-left text-md sm:text-lg">
               <li>
                 <a
                   href="https://github.com/stac-utils/stac-fastapi-elasticsearch"
@@ -53,6 +53,16 @@ const AboutUs = () => {
                   className="text-black hover:text-gray-700 transition duration-300"
                 >
                   stac-fastapi-elasticsearch-opensearch
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://github.com/Healy-Hyperspatial/stac-fastapi-mongo"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-black hover:text-gray-700 transition duration-300"
+                >
+                  stac-fastapi-mongo
                 </a>
               </li>
               <li>
@@ -93,14 +103,14 @@ const AboutUs = () => {
             <div className="flex items-center space-x-2 mb-4">
               <FontAwesomeIcon
                 icon={faGlobe}
-                className="text-black hover:text-black transition duration-300"
+                className="text-gray-500 hover:text-black transition duration-300"
                 size="2x"
               />
               <h3 className="text-md sm:text-xl font-semibold text-left">
                 Website Design
               </h3>
             </div>
-            <ul className="space-y-4 text-left">
+            <ul className="space-y-4 text-left text-md sm:text-lg">
               <li>
                 <a
                   href="https://jonhealy1.github.io"

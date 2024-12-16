@@ -72,7 +72,7 @@ const ServiceCards = () => {
               key={tab.id}
               className={`py-2 px-4 text-sm sm:text-base font-medium rounded-t-xl w-full ${
                 activeTab === tab.id
-                  ? "bg-gray-700 text-white shadow-lg"
+                  ? "bg-gray-800 text-white shadow-lg"
                   : "bg-gray-100 text-gray-600 hover:bg-gray-200"
               }`}
               onClick={() => setActiveTab(tab.id)}
@@ -83,7 +83,7 @@ const ServiceCards = () => {
         </div>
 
         {/* Active Tab Content */}
-        <div className="bg-gray-400 shadow-lg p-4 rounded-b-xl">
+        <div className="bg-gray-100 shadow-lg p-4 rounded-b-xl">
           {tabs
             .filter((tab) => tab.id === activeTab)
             .map((tab) => (
@@ -91,14 +91,14 @@ const ServiceCards = () => {
                 <div className="flex items-center mb-4">
                   <FontAwesomeIcon
                     icon={tab.icon}
-                    className="text-white text-4xl mr-3"
+                    className="text-black text-4xl mr-3"
                   />
-                  <h3 className="text-lg font-bold text-white">{tab.title}</h3>
+                  <h3 className="text-lg font-bold text-black">{tab.title}</h3>
                 </div>
                 <p className="text-gray-900 text-left leading-relaxed">
                   {tab.description}
                 </p>
-                <ul className="mt-4 text-gray-100 text-left list-disc list-inside space-y-1">
+                <ul className="mt-4 text-gray-800 text-left list-disc list-inside space-y-1">
                   {tab.list.map((item, index) => (
                     <li key={index}>{item}</li>
                   ))}
@@ -110,13 +110,35 @@ const ServiceCards = () => {
 
       {/* Additional Column */}
       <div className="bg-white p-6 rounded-xl shadow-md flex-1">
-        <h3 className="text-xl font-bold text-gray-800 mb-4">
-          Additional Content
+        <h3 className="text-xl font-bold text-gray-800 mb-4 text-left">
+          Open Source Values
         </h3>
-        <p className="text-gray-600 leading-relaxed">
-          This is an additional column where you can add content, images, or
-          anything else that complements the tabs.
+        <p className="text-gray-600 leading-relaxed text-left">
+          At Healy Hyperspatial, we are deeply committed to the principles of
+          open source. Our work is built on collaboration, transparency, and
+          community-driven innovation.
         </p>
+        <div className="mt-4 bg-gray-50 p-4 rounded-lg shadow-inner">
+          <h4 className="text-lg font-semibold text-gray-800 mb-2 text-left">
+            SFEOS: STAC Ecosystem Contributions
+          </h4>
+          <p className="text-gray-700 leading-relaxed text-left">
+            One of our key contributions is{" "}
+            <a
+              href="https://github.com/stac-utils/stac-fastapi-elasticsearch-opensearch"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-black hover:underline"
+            >
+              stac-fastapi-elasticsearch-opensearch
+            </a>
+            , an open-source project providing Elasticsearch and OpenSearch
+            backends for STAC APIs. This project supports advanced aggregation
+            and search capabilities, enabling efficient geospatial data
+            exploration and management. We also provide ready-to-use Docker
+            images to simplify deployment for developers.
+          </p>
+        </div>
       </div>
     </div>
   );

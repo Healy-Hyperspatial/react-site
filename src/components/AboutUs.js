@@ -8,10 +8,10 @@ const AboutUs = () => {
       <div className="container mx-auto flex flex-col md:flex-row gap-8">
         {/* Main Content */}
         <div className="flex-1">
-          <h2 className="text-xl sm:text-3xl font-bold mb-6 text-left">
+          <h2 className="text-xl sm:text-4xl font-bold mb-6 text-left">
             About Us
           </h2>
-          <p className="text-md sm:text-lg leading-relaxed mb-6 text-left">
+          <p className="text-md sm:text-xl leading-relaxed mb-6 text-left">
             Healy Hyperspatial was created to deliver highly effective,
             next-generation services to forward-thinking organizations. We
             specialize in API and database design, geospatial innovation, and
@@ -19,7 +19,7 @@ const AboutUs = () => {
             proponents of open-source, we are committed to contributing to the
             development of the STAC (SpatioTemporal Asset Catalog) ecosystem.
           </p>
-          <p className="text-md sm:text-lg leading-relaxed mb-6 text-left">
+          <p className="text-md sm:text-xl leading-relaxed mb-6 text-left">
             Our mission extends beyond providing services; we aim to foster a
             community where innovation thrives, sharing knowledge and tools that
             empower developers and organizations to reach their full potential.

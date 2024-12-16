@@ -5,7 +5,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ["Playfair Display", ...defaultTheme.fontFamily.sans],
+        sans: ["Oxanium", ...defaultTheme.fontFamily.sans],
       },
     },
   },

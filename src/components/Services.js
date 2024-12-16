@@ -25,16 +25,16 @@ const Services = () => {
       <div className="container mx-auto flex flex-col md:flex-row gap-8">
         {/* Left Column: Text */}
         <div className="w-full md:flex-1">
-          <h2 className="text-xl sm:text-3xl font-bold mb-6 text-left">
+          <h2 className="text-xl sm:text-4xl font-bold mb-6 text-left">
             Our Services
           </h2>
-          <p className="text-md sm:text-lg leading-relaxed mb-6 text-left">
+          <p className="text-md sm:text-xl leading-relaxed mb-6 text-left">
             At Healy Hyperspatial, we specialize in delivering innovative
             solutions tailored to the needs of forward-thinking organizations.
             Our expertise spans a range of cutting-edge technologies and
             industry domains.
           </p>
-          <p className="text-md sm:text-lg leading-relaxed mb-6 text-left">
+          <p className="text-md sm:text-xl leading-relaxed mb-6 text-left">
             We focus on geospatial analytics, scalable API and database design,
             and cloud-based solutions. Our goal is to empower organizations with
             robust, reliable, and scalable technologies.

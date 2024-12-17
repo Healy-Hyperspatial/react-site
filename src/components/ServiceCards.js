@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faCode,
   faCloud,
@@ -71,9 +71,9 @@ const ServiceCards = () => {
             }
             className="w-full flex justify-between items-center py-4 px-6 bg-gray-100 hover:bg-gray-200 transition duration-300"
           >
-            <span className="flex items-center space-x-2 text-lg font-semibold">
-              <FontAwesomeIcon icon={service.icon} className="text-gray-600" />
-              <span>{service.title}</span>
+            <span className="flex items-center space-x-2 sm:text-lg font-semibold">
+              {/* <FontAwesomeIcon icon={service.icon} className="text-gray-600" /> */}
+              <span className="font-comfortaa">{service.title}</span>
             </span>
             <span>{openSection === service.id ? "−" : "+"}</span>
           </button>

@@ -1,7 +1,6 @@
 import React from "react";
 import logo from "../assets/healy-hyper-banner-new.svg";
 import starsVideo from "../assets/stars.mp4"; // Import the video file
-import Navbar from "./Navbar";
 
 const Header = () => {
   return (
@@ -26,7 +25,6 @@ const Header = () => {
 
         <div className="relative z-10 flex flex-col items-center justify-center h-full">
           {/* Enlarged Logo */}
-          <Navbar />
           <img
             src={logo}
             alt="Healy-Hyperspatial Logo"

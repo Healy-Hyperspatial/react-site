@@ -84,12 +84,12 @@ const Navbar = () => {
             >
               Services
             </a>
-            <a
+            {/* <a
               href="#contact"
               className="hover:text-gray-300 text-lg font-medium"
             >
               Contact
-            </a>
+            </a> */}
           </div>
         </div>
       )}

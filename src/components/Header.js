@@ -21,6 +21,9 @@ const Header = () => {
           Your browser does not support the video tag.
         </video>
 
+        {/* Dark Overlay */}
+        <div className="absolute top-0 left-0 w-full h-full bg-black opacity-50"></div>
+
         {/* Content */}
 
         <div className="relative z-10 flex flex-col items-center justify-center h-full">
@@ -29,9 +32,9 @@ const Header = () => {
             src={logo}
             alt="Healy-Hyperspatial Logo"
             className="w-[80%] max-w-4xl object-contain"
-            // style={{
-            //   filter: "drop-shadow(2px 2px 10px rgba(255, 255, 255, 0.8))",
-            // }}
+            style={{
+              filter: "drop-shadow(1px 1px 3px rgba(255, 255, 255, 0.8))",
+            }}
           />
 
           {/* Social Media Links */}
@@ -41,7 +44,7 @@ const Header = () => {
               href="https://www.linkedin.com/company/healy-hyperspatial"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-gray-400 hover:text-white transition duration-300"
+              className="text-gray-300 hover:text-white transition duration-300"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -58,7 +61,7 @@ const Header = () => {
               href="https://github.com/Healy-Hyperspatial"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-gray-400 hover:text-white transition duration-300"
+              className="text-gray-300 hover:text-white transition duration-300"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"

@@ -1,16 +1,39 @@
 import React from "react";
-import logo from "../assets/hh-bw-wide.png";
+import logo from "../assets/healy-hyper-banner-new.svg";
+import starsVideo from "../assets/stars.mp4"; // Import the video file
+import Navbar from "./Navbar";
 
 const Header = () => {
   return (
     <section id="home">
-      <header className="bg-black text-white">
-        <div className="flex flex-col items-center justify-center py-8">
+      <header
+        className="relative text-white overflow-hidden"
+        style={{ height: "100vh" }}
+      >
+        {/* Video Background */}
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="absolute inset-0 w-full h-full object-cover z-0"
+        >
+          <source src={starsVideo} type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+
+        {/* Content */}
+
+        <div className="relative z-10 flex flex-col items-center justify-center h-full">
           {/* Enlarged Logo */}
+          <Navbar />
           <img
             src={logo}
             alt="Healy-Hyperspatial Logo"
             className="w-[80%] max-w-4xl object-contain"
+            // style={{
+            //   filter: "drop-shadow(2px 2px 10px rgba(255, 255, 255, 0.8))",
+            // }}
           />
 
           {/* Social Media Links */}

@@ -2,98 +2,93 @@ import React, { useState, useEffect } from "react";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [isVisible, setIsVisible] = useState(true);
-  const [lastScrollY, setLastScrollY] = useState(0);
+  const [isAtTop, setIsAtTop] = useState(true);
 
-  // Scroll event to toggle navbar visibility
+  // Check scroll position
   useEffect(() => {
     const handleScroll = () => {
-      const currentScrollY = window.scrollY;
-      if (currentScrollY > lastScrollY) {
-        setIsVisible(false); // Hide navbar on scroll down
-      } else {
-        setIsVisible(true); // Show navbar on scroll up
-      }
-      setLastScrollY(currentScrollY);
+      setIsAtTop(window.scrollY === 0);
     };
 
     window.addEventListener("scroll", handleScroll);
 
     return () => window.removeEventListener("scroll", handleScroll);
-  }, [lastScrollY]);
+  }, []);
 
   return (
-    <nav
-      id="home"
-      className={`fixed top-0 w-full z-50 bg-transparent text-gray-300 ${
-        isVisible ? "" : "hidden"
-      }`}
-    >
-      <div className="container mx-auto flex items-center justify-between px-6 py-4">
-        {/* Navigation Links */}
-        <div className="hidden md:flex space-x-8 text-xl md:text-2xl font-medium">
-          <a href="#home" className="hover:text-white text-lg font-medium">
-            Home
-          </a>
-          <a href="#about" className="hover:text-white text-lg font-medium">
-            About Us
-          </a>
-          <a href="#services" className="hover:text-white text-lg font-medium">
-            Services
-          </a>
-        </div>
-
-        {/* Hamburger Menu for Mobile */}
-        <button
-          onClick={() => setIsOpen(!isOpen)}
-          className="md:hidden text-gray-400 hover:text-white focus:outline-none"
+    <>
+      {isAtTop && ( // Only render navbar when at the top of the page
+        <nav
+          id="home"
+          className="fixed top-0 w-full z-50 bg-transparent text-gray-300"
         >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            className="h-6 w-6"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={2}
-              d="M4 6h16M4 12h16m-7 6h7"
-            />
-          </svg>
-        </button>
-      </div>
+          <div className="container mx-auto flex items-center justify-between px-6 py-4">
+            {/* Navigation Links */}
+            <div className="hidden md:flex space-x-8 text-xl md:text-2xl font-medium">
+              <a href="#home" className="hover:text-white text-lg font-medium">
+                Home
+              </a>
+              <a href="#about" className="hover:text-white text-lg font-medium">
+                About Us
+              </a>
+              <a
+                href="#services"
+                className="hover:text-white text-lg font-medium"
+              >
+                Services
+              </a>
+            </div>
 
-      {/* Mobile Menu */}
-      {isOpen && (
-        <div className="md:hidden bg-transparent">
-          <div className="flex flex-col items-center space-y-4 py-4">
-            <a href="#home" className="hover:text-gray-300 text-lg font-medium">
-              Home
-            </a>
-            <a
-              href="#about"
-              className="hover:text-gray-300 text-lg font-medium"
+            {/* Hamburger Menu for Mobile */}
+            <button
+              onClick={() => setIsOpen(!isOpen)}
+              className="md:hidden text-gray-400 hover:text-white focus:outline-none"
             >
-              About Us
-            </a>
-            <a
-              href="#services"
-              className="hover:text-gray-300 text-lg font-medium"
-            >
-              Services
-            </a>
-            {/* <a
-              href="#contact"
-              className="hover:text-gray-300 text-lg font-medium"
-            >
-              Contact
-            </a> */}
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-6 w-6"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M4 6h16M4 12h16m-7 6h7"
+                />
+              </svg>
+            </button>
           </div>
-        </div>
+
+          {/* Mobile Menu */}
+          {isOpen && (
+            <div className="md:hidden bg-transparent">
+              <div className="flex flex-col items-center space-y-4 py-4">
+                <a
+                  href="#home"
+                  className="hover:text-gray-300 text-lg font-medium"
+                >
+                  Home
+                </a>
+                <a
+                  href="#about"
+                  className="hover:text-gray-300 text-lg font-medium"
+                >
+                  About Us
+                </a>
+                <a
+                  href="#services"
+                  className="hover:text-gray-300 text-lg font-medium"
+                >
+                  Services
+                </a>
+              </div>
+            </div>
+          )}
+        </nav>
       )}
-    </nav>
+    </>
   );
 };
 

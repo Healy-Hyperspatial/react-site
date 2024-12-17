@@ -1,8 +1,16 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import url("https://fonts.googleapis.com/css2?family=Oxanium:wght@400;700&display=swap");
 
-body {
-  @apply font-sans;
+h1,
+h2,
+h3,
+nav,
+.logo-text {
+  font-family: "Comfortaa", sans-serif;
+}
+
+body,
+p {
+  font-family: "Lora", sans-serif;
 }

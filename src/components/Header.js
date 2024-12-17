@@ -27,14 +27,11 @@ const Header = () => {
         {/* Content */}
 
         <div className="relative z-10 flex flex-col items-center justify-center h-full">
-          {/* Enlarged Logo */}
+          {/* Enlarged Logo with Hover Effect */}
           <img
             src={logo}
             alt="Healy-Hyperspatial Logo"
-            className="w-[80%] max-w-4xl object-contain"
-            style={{
-              filter: "drop-shadow(1px 1px 3px rgba(255, 255, 255, 0.8))",
-            }}
+            className="w-[80%] max-w-4xl object-contain transform transition-transform duration-300 hover:scale-105"
           />
 
           {/* Social Media Links */}

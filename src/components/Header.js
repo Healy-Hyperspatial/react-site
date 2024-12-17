@@ -1,5 +1,5 @@
 import React from "react";
-import logo from "../assets/healy-hyper-banner-new.svg";
+import logo from "../assets/healy-hyper-banner.svg";
 import starsVideo from "../assets/stars.mp4"; // Import the video file
 
 const Header = () => {

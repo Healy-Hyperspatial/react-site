@@ -1,31 +1,46 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [isVisible, setIsVisible] = useState(true);
+  const [lastScrollY, setLastScrollY] = useState(0);
+
+  // Scroll event to toggle navbar visibility
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+      if (currentScrollY > lastScrollY) {
+        setIsVisible(false); // Hide navbar on scroll down
+      } else {
+        setIsVisible(true); // Show navbar on scroll up
+      }
+      setLastScrollY(currentScrollY);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [lastScrollY]);
 
   return (
-    <nav id="home" className="text-gray-300">
+    <nav
+      id="home"
+      className={`fixed top-0 w-full z-50 bg-transparent text-gray-300 ${
+        isVisible ? "" : "hidden"
+      }`}
+    >
       <div className="container mx-auto flex items-center justify-between px-6 py-4">
         {/* Navigation Links */}
-        <div className="hidden md:flex space-x-8 text-xl font-medium">
-          <a href="#home" className="hover:text-white transition duration-300">
+        <div className="hidden md:flex space-x-8 text-xl md:text-2xl font-medium">
+          <a href="#home" className="hover:text-white text-lg font-medium">
             Home
           </a>
-          <a href="#about" className="hover:text-white transition duration-300">
+          <a href="#about" className="hover:text-white text-lg font-medium">
             About Us
           </a>
-          <a
-            href="#services"
-            className="hover:text-white transition duration-300"
-          >
+          <a href="#services" className="hover:text-white text-lg font-medium">
             Services
           </a>
-          {/* <a
-            href="#contact"
-            className="hover:text-gray-300 transition duration-300"
-          >
-            Contact
-          </a> */}
         </div>
 
         {/* Hamburger Menu for Mobile */}
@@ -52,29 +67,26 @@ const Navbar = () => {
 
       {/* Mobile Menu */}
       {isOpen && (
-        <div className="md:hidden bg-black">
+        <div className="md:hidden bg-transparent">
           <div className="flex flex-col items-center space-y-4 py-4">
-            <a
-              href="#home"
-              className="hover:text-gray-300 transition duration-300 text-lg font-medium"
-            >
+            <a href="#home" className="hover:text-gray-300 text-lg font-medium">
               Home
             </a>
             <a
               href="#about"
-              className="hover:text-gray-300 transition duration-300 text-lg font-medium"
+              className="hover:text-gray-300 text-lg font-medium"
             >
               About Us
             </a>
             <a
               href="#services"
-              className="hover:text-gray-300 transition duration-300 text-lg font-medium"
+              className="hover:text-gray-300 text-lg font-medium"
             >
               Services
             </a>
             <a
               href="#contact"
-              className="hover:text-gray-300 transition duration-300 text-lg font-medium"
+              className="hover:text-gray-300 text-lg font-medium"
             >
               Contact
             </a>

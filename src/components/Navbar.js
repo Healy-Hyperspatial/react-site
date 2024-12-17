@@ -4,25 +4,19 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav id="home" className="bg-black text-white shadow">
+    <nav id="home" className="text-gray-300">
       <div className="container mx-auto flex items-center justify-between px-6 py-4">
         {/* Navigation Links */}
         <div className="hidden md:flex space-x-8 text-xl font-medium">
-          <a
-            href="#home"
-            className="hover:text-gray-300 transition duration-300"
-          >
+          <a href="#home" className="hover:text-white transition duration-300">
             Home
           </a>
-          <a
-            href="#about"
-            className="hover:text-gray-300 transition duration-300"
-          >
+          <a href="#about" className="hover:text-white transition duration-300">
             About Us
           </a>
           <a
             href="#services"
-            className="hover:text-gray-300 transition duration-300"
+            className="hover:text-white transition duration-300"
           >
             Services
           </a>

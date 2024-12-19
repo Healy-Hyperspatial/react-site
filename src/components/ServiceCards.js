@@ -72,7 +72,7 @@ const ServiceCards = () => {
               }
               className="w-full flex justify-between items-center py-4 px-6 bg-gray-100 hover:bg-gray-200 transition duration-300"
             >
-              <span className="flex items-center space-x-2 sm:text-lg font-semibold">
+              <span className="flex items-center space-x-2 sm:text-xl font-semibold">
                 <span className="font-comfortaa">{service.title}</span>
               </span>
               <span>{openSection === service.id ? "−" : "+"}</span>
@@ -91,21 +91,21 @@ const ServiceCards = () => {
         ))}
       </div>
 
-      {/* Additional Column */}
+      {/* Open Source Values */}
       <div className="bg-white p-6 rounded-xl shadow-md flex-1">
-        <h3 className="text-xl font-bold text-gray-800 mb-4 text-left">
+        <h3 className="sm:text-2xl font-bold text-gray-800 mb-4 text-left">
           Open Source Values
         </h3>
-        <p className="text-gray-600 leading-relaxed text-left">
+        <p className="text-gray-600 sm:text-lg leading-relaxed text-left">
           At Healy Hyperspatial, we are deeply committed to the principles of
           open source. Our work is built on collaboration, transparency, and
           community-driven innovation.
         </p>
         <div className="mt-4 bg-gray-50 p-4 rounded-lg shadow-inner">
-          <h4 className="text-lg font-semibold text-gray-800 mb-2 text-left">
+          <h4 className="sm:text-xl font-comfortaa font-semibold text-gray-800 mb-2 text-left">
             SFEOS: STAC Ecosystem Contributions
           </h4>
-          <p className="text-gray-700 leading-relaxed text-left">
+          <p className="text-gray-700 sm:text-lg leading-relaxed text-left">
             One of our key contributions is{" "}
             <a
               href="https://github.com/stac-utils/stac-fastapi-elasticsearch-opensearch"

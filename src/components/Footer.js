@@ -4,7 +4,7 @@ import { faLinkedin, faGithub } from "@fortawesome/free-brands-svg-icons";
 
 const Footer = () => {
   return (
-    <footer className="bg-black text-white py-8">
+    <footer className="bg-black text-white py-12">
       <div className="container mx-auto flex flex-col items-center space-y-6 md:flex-row md:justify-between md:space-y-0 px-6">
         {/* Footer Navigation */}
         <div className="flex flex-col items-center md:items-start space-y-4 md:space-y-0 md:flex-row md:space-x-8">
@@ -43,7 +43,7 @@ const Footer = () => {
             rel="noopener noreferrer"
             className="text-gray-400 hover:text-white transition duration-300"
           >
-            <FontAwesomeIcon icon={faLinkedin} className="h-6 w-6" />
+            <FontAwesomeIcon icon={faLinkedin} className="h-8 w-8" />
           </a>
           {/* GitHub Icon */}
           <a
@@ -52,7 +52,7 @@ const Footer = () => {
             rel="noopener noreferrer"
             className="text-gray-400 hover:text-white transition duration-300"
           >
-            <FontAwesomeIcon icon={faGithub} className="h-6 w-6" />
+            <FontAwesomeIcon icon={faGithub} className="h-8 w-8" />
           </a>
         </div>
 

@@ -1,12 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
 import logo from "../assets/healy-hyper-banner.png";
 import starsVideo from "../assets/stars5.mp4"; // Import the video file
 
 const Header = () => {
+  const [videoLoaded, setVideoLoaded] = useState(false);
+
   return (
     <section id="home">
       <header
-        className="relative text-white overflow-hidden"
+        className={`relative text-white overflow-hidden ${
+          !videoLoaded ? "bg-black" : ""
+        }`}
         style={{ height: "100vh" }}
       >
         {/* Video Background */}
@@ -15,7 +19,10 @@ const Header = () => {
           loop
           muted
           playsInline
-          className="absolute inset-0 w-full h-full object-cover z-0"
+          className={`absolute inset-0 w-full h-full object-cover z-0 ${
+            videoLoaded ? "" : "hidden"
+          }`}
+          onCanPlay={() => setVideoLoaded(true)}
         >
           <source src={starsVideo} type="video/mp4" />
           Your browser does not support the video tag.

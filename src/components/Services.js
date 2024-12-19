@@ -18,6 +18,7 @@ import fastapiLogo from "../assets/fastapi-logo.svg";
 import mongoLogo from "../assets/mongo-logo.svg";
 import kubernetesLogo from "../assets/kubernetes-logo.svg";
 import azureLogo from "../assets/azure-logo.svg";
+import ServiceCards from "./ServiceCards";
 
 const Services = () => {
   return (
@@ -86,7 +87,9 @@ const Services = () => {
           </div>
         </div>
       </div>
+      <ServiceCards />
     </section>
+
   );
 };
 

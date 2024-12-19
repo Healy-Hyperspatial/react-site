@@ -26,6 +26,12 @@ const Footer = () => {
           >
             Services
           </a>
+          <a
+            href="#open-source"
+            className="text-gray-400 hover:text-white font-comfortaa transition duration-300"
+          >
+            Open Source
+          </a>
           {/* <a
             href="#contact"
             className="text-gray-400 hover:text-white transition duration-300"

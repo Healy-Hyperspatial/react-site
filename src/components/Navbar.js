@@ -56,6 +56,12 @@ const Navbar = () => {
               >
                 Services
               </a>
+              <a
+                href="#open-source"
+                className="hover:text-white md:text-lg font-medium"
+              >
+                Open Source
+              </a>
             </div>
 
             {/* Hamburger Menu for Mobile (hidden in landscape mode) */}

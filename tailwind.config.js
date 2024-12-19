@@ -5,7 +5,9 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ["Oxanium", ...defaultTheme.fontFamily.sans],
+        sans: ["Lora", ...defaultTheme.fontFamily.sans],
+        oxanium: ["Oxanium", "sans-serif"],
+        comfortaa: ["Comfortaa", "sans-serif"],
       },
     },
   },

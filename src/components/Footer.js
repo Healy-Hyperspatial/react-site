@@ -10,19 +10,19 @@ const Footer = () => {
         <div className="flex flex-col items-center md:items-start space-y-4 md:space-y-0 md:flex-row md:space-x-8">
           <a
             href="#home"
-            className="text-gray-400 hover:text-white transition duration-300"
+            className="text-gray-400 hover:text-white font-comfortaa transition duration-300"
           >
             Home
           </a>
           <a
             href="#about"
-            className="text-gray-400 hover:text-white transition duration-300"
+            className="text-gray-400 hover:text-white font-comfortaa transition duration-300"
           >
             About Us
           </a>
           <a
             href="#services"
-            className="text-gray-400 hover:text-white transition duration-300"
+            className="text-gray-400 hover:text-white font-comfortaa transition duration-300"
           >
             Services
           </a>

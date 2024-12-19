@@ -1,16 +1,44 @@
-import React from "react";
-import logo from "../assets/hh-bw-wide.png";
+import React, { useState } from "react";
+import logo from "../assets/healy-hyper-banner.png";
+import starsVideo from "../assets/stars5.mp4"; // Import the video file
 
 const Header = () => {
+  const [videoLoaded, setVideoLoaded] = useState(false);
+
   return (
     <section id="home">
-      <header className="bg-black text-white">
-        <div className="flex flex-col items-center justify-center py-8">
-          {/* Enlarged Logo */}
+      <header
+        className={`relative text-white overflow-hidden ${
+          !videoLoaded ? "bg-black" : ""
+        }`}
+        style={{ height: "100vh" }}
+      >
+        {/* Video Background */}
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          className={`absolute inset-0 w-full h-full object-cover z-0 ${
+            videoLoaded ? "" : "hidden"
+          }`}
+          onCanPlay={() => setVideoLoaded(true)}
+        >
+          <source src={starsVideo} type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+
+        {/* Dark Overlay */}
+        <div className="absolute top-0 left-0 w-full h-full bg-black opacity-30"></div>
+
+        {/* Content */}
+
+        <div className="relative z-10 flex flex-col items-center justify-center h-full">
+          {/* Enlarged Logo with Hover Effect */}
           <img
             src={logo}
             alt="Healy-Hyperspatial Logo"
-            className="w-[80%] max-w-4xl object-contain"
+            className="w-[80%] max-w-4xl object-contain transform transition-transform duration-300 hover:scale-105"
           />
 
           {/* Social Media Links */}
@@ -20,7 +48,7 @@ const Header = () => {
               href="https://www.linkedin.com/company/healy-hyperspatial"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-gray-400 hover:text-white transition duration-300"
+              className="text-gray-300 hover:text-white transition duration-300"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -37,7 +65,7 @@ const Header = () => {
               href="https://github.com/Healy-Hyperspatial"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-gray-400 hover:text-white transition duration-300"
+              className="text-gray-300 hover:text-white transition duration-300"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"

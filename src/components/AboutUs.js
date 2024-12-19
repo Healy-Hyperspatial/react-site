@@ -37,7 +37,7 @@ const AboutUs = () => {
             <div className="flex items-center space-x-2 mb-4">
               <FontAwesomeIcon
                 icon={faCodeBranch}
-                className="text-gray-500 hover:text-black transition duration-300"
+                className="text-gray-500 hover:text-black font-oxanium transition duration-300"
                 size="2x"
               />
               <h3 className="text-md sm:text-xl font-semibold text-left">
@@ -50,7 +50,7 @@ const AboutUs = () => {
                   href="https://github.com/stac-utils/stac-fastapi-elasticsearch"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-black hover:text-gray-700 transition duration-300"
+                  className="text-black hover:text-gray-700 font-oxanium transition duration-300"
                 >
                   stac-fastapi-elasticsearch-opensearch
                 </a>
@@ -60,7 +60,7 @@ const AboutUs = () => {
                   href="https://github.com/Healy-Hyperspatial/stac-fastapi-mongo"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-black hover:text-gray-700 transition duration-300"
+                  className="text-black hover:text-gray-700 font-oxanium transition duration-300"
                 >
                   stac-fastapi-mongo
                 </a>
@@ -70,7 +70,7 @@ const AboutUs = () => {
                   href="https://github.com/stac-utils/stac-validator"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-black hover:text-gray-700 transition duration-300"
+                  className="text-black hover:text-gray-700 font-oxanium transition duration-300"
                 >
                   stac-validator
                 </a>
@@ -80,7 +80,7 @@ const AboutUs = () => {
                   href="https://github.com/stac-utils/stac-check"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-black hover:text-gray-700 transition duration-300"
+                  className="text-black hover:text-gray-700 font-oxanium transition duration-300"
                 >
                   stac-check
                 </a>
@@ -90,7 +90,7 @@ const AboutUs = () => {
                   href="https://github.com/stacchain"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-black hover:text-gray-700 transition duration-300"
+                  className="text-black hover:text-gray-700 font-oxanium transition duration-300"
                 >
                   stacchain
                 </a>
@@ -116,7 +116,7 @@ const AboutUs = () => {
                   href="https://jonhealy1.github.io"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-black hover:text-gray-700 transition duration-300"
+                  className="text-black hover:text-gray-700 font-oxanium transition duration-300"
                 >
                   jonhealy1.github.io
                 </a>
@@ -126,7 +126,7 @@ const AboutUs = () => {
                   href="https://stacchain.github.io"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-black hover:text-gray-700 transition duration-300"
+                  className="text-black hover:text-gray-700 font-oxanium transition duration-300"
                 >
                   stacchain.github.io
                 </a>

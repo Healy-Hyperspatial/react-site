@@ -8,10 +8,10 @@ const AboutUs = () => {
       <div className="container mx-auto flex flex-col md:flex-row gap-8">
         {/* Main Content */}
         <div className="flex-1">
-          <h2 className="text-xl sm:text-3xl font-bold mb-6 text-left">
+          <h2 className="text-xl sm:text-4xl font-bold mb-6 text-left">
             About Us
           </h2>
-          <p className="text-md sm:text-lg leading-relaxed mb-6 text-left">
+          <p className="text-md sm:text-xl leading-relaxed mb-6 text-left">
             Healy Hyperspatial was created to deliver highly effective,
             next-generation services to forward-thinking organizations. We
             specialize in API and database design, geospatial innovation, and
@@ -19,7 +19,7 @@ const AboutUs = () => {
             proponents of open-source, we are committed to contributing to the
             development of the STAC (SpatioTemporal Asset Catalog) ecosystem.
           </p>
-          <p className="text-md sm:text-lg leading-relaxed mb-6 text-left">
+          <p className="text-md sm:text-xl leading-relaxed mb-6 text-left">
             Our mission extends beyond providing services; we aim to foster a
             community where innovation thrives, sharing knowledge and tools that
             empower developers and organizations to reach their full potential.
@@ -37,14 +37,14 @@ const AboutUs = () => {
             <div className="flex items-center space-x-2 mb-4">
               <FontAwesomeIcon
                 icon={faCodeBranch}
-                className="text-black hover:text-black transition duration-300"
+                className="text-gray-500 hover:text-black transition duration-300"
                 size="2x"
               />
               <h3 className="text-md sm:text-xl font-semibold text-left">
                 Open Source Projects
               </h3>
             </div>
-            <ul className="space-y-4 text-left">
+            <ul className="space-y-4 text-left text-md sm:text-lg">
               <li>
                 <a
                   href="https://github.com/stac-utils/stac-fastapi-elasticsearch"
@@ -53,6 +53,16 @@ const AboutUs = () => {
                   className="text-black hover:text-gray-700 transition duration-300"
                 >
                   stac-fastapi-elasticsearch-opensearch
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://github.com/Healy-Hyperspatial/stac-fastapi-mongo"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-black hover:text-gray-700 transition duration-300"
+                >
+                  stac-fastapi-mongo
                 </a>
               </li>
               <li>
@@ -93,14 +103,14 @@ const AboutUs = () => {
             <div className="flex items-center space-x-2 mb-4">
               <FontAwesomeIcon
                 icon={faGlobe}
-                className="text-black hover:text-black transition duration-300"
+                className="text-gray-500 hover:text-black transition duration-300"
                 size="2x"
               />
               <h3 className="text-md sm:text-xl font-semibold text-left">
                 Website Design
               </h3>
             </div>
-            <ul className="space-y-4 text-left">
+            <ul className="space-y-4 text-left text-md sm:text-lg">
               <li>
                 <a
                   href="https://jonhealy1.github.io"
